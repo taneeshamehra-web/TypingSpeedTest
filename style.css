@@ -47,3 +47,11 @@ textarea {
 #reStart:hover{
     background-color: #5a67d8;
 }
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}

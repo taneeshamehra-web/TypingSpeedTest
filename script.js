@@ -15,6 +15,29 @@ selectLevel.addEventListener("change", (event)=>{
         span.innerText = Char
         paragraph.appendChild(span)
         
-    });
+    }); 
+})
+
+let input = document.getElementById("input")
+input.addEventListener("input", ()=>{
+    let typedText = input.value.split("")
+    let spans = paragraph.querySelectorAll("span")
+    spans.forEach((span, index)=> {
+        let typedChar = typedText[index];
+        console.log(typedChar)
+        if (!typedChar){
+            span.classList.remove ("correct", "incorrect")
+        } 
+        else if (typedChar == span.innerText ){
+            span.classList.add("correct")
+            span.classList.remove("incorrect")
+        }
+        else {
+            span.classList.add("incorrect")
+            span.classList.remove("correct")
+        }
+        
+
+    }) 
 })
 
