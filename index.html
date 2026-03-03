@@ -12,6 +12,7 @@
     <div class="container">
         <h1>Typing Speed Test</h1>
         <select id="level">
+            <option value="">SelectLevel</option>
             <option value="beginner">Beginner</option>
             <option value="intermediate">Intermediate</option>
             <option value="advanced">Advanced</option>
@@ -20,10 +21,12 @@
         <textarea id="input" placeholder="Start typing here..."></textarea>
         <div class="info">
             <p>Time left: <span id="Time">60</span></p>
+            <p>Accuracy: <span id="Accuracy">0</span>%</p>
 
         </div>
 
-        <button id="reStart">Restart</button>
+        <button id="reStart" onclick="restartTest()">Restart</button>
+        
 
 
     </div>
